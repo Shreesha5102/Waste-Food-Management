@@ -20,11 +20,10 @@ function App() {
         <Bar />
         <Jumbo />
         <Carouseal />
-        
         <Switch>
           <Route path="/" exact component= { Content } />
           <Route path="/donate" exact component= { Donate } />
-          <Contact />
+          
 
         </Switch>
       </Container>
