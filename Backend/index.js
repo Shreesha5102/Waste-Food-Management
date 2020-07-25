@@ -4,7 +4,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
-const route = require("./routes/route");
+const donorRoutes = require("./routes/route");
+const recieverRoutes = require("./routes/route1");
 
 app.use(cors());  //cors is used to allow cross-origin-access
 app.use(bodyParser.json());

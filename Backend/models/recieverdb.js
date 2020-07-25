@@ -1,15 +1,11 @@
 const mongoose = require('mongoose');
 
-var DonorSchema = mongoose.Schema({
+var RecieverSchema = mongoose.Schema({
     Name: {
         type: String,
         required: true
     },
     Phone_no: {
-        type: String,
-        required: true
-    },
-    Items: {
         type: String,
         required: true
     },
@@ -21,4 +17,4 @@ var DonorSchema = mongoose.Schema({
 }) 
 
 
-module.exports = mongoose.model('Donor', DonorSchema);
+module.exports = mongoose.model('Reciever', RecieverSchema);
