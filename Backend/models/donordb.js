@@ -9,11 +9,18 @@ var DonorSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    address: {
+    Street: {
+        type: String,
+        required: true
+    },
+    Town: {
+        type: String,
+        required: true
+    },
+    City: {
         type: String,
         required: true
     }
-
 }) 
 
 
