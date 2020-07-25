@@ -10,7 +10,7 @@ class Bar extends Component {
         return ( 
             <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href="#home">
-                    LIMIT BREAKERS
+                   <center>LIMIT BREAKERS</center> 
                 </Navbar.Brand>
             </Navbar>
          );
