@@ -9,6 +9,7 @@ var DonorSchema = mongoose.Schema({
         type: String,
         required: true
     },
+<<<<<<< HEAD
     Street: {
         type: String,
         required: true
@@ -18,6 +19,13 @@ var DonorSchema = mongoose.Schema({
         required: true
     },
     City: {
+=======
+    Items: {
+        type: String,
+        required: true
+    },
+    address: {
+>>>>>>> e5ba816f6336fc207cbdf811e80c9d5f9d6c053d
         type: String,
         required: true
     }
