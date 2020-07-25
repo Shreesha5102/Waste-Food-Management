@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
 "mdbreact";
-import img from "../images/5.jpg"
+import img from "../images/14.jpg"
 import img1 from "../images/10.jpg"
-import img2 from "../images/7.jpg"
+import img2 from "../images/11.jpg"
 
 class Carouseal extends Component {
     constructor(props) {
