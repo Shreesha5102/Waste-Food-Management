@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-import { Form, Container, Row, Col, Table } from 'react-bootstrap';
+import { Form, Container, Row, Col, Table, Button } from 'react-bootstrap';
 
 class Reciever extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            donators_list: []
+            donators_list: [],
+            Name: "",
+            Phone_no: "",
+            Street: "",
+            Country: "India",
+            State: "",
+            City: ""
          }
     }
 
@@ -23,10 +29,44 @@ class Reciever extends Component {
              });
          })
     }
+
+    handlechange = (event) => {
+        let name = event.target.name;
+        let value = event.target.value;
+        this.setState({
+            [name] : value
+        });
+    }
+
+    postdetails = (e) => {
+        e.preventDefault();
+        console.log("Submiting Reciever Form");
+
+        fetch("http://localhost:4000/route/recievedetails/", {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                'Name': this.state.Name,
+                'Phone_no': this.state.Phone_no,
+                'Street': this.state.Street,
+                'Country': this.state.Country,
+                'State': this.state.State,
+                'City': this.state.City,
+            })
+        })
+        .then(res => res.json())
+         .then( (data) => {
+            console.log(data);
+        })
+    }
+
     render() { 
         return ( 
             <Container fluid>
-                <Form>
+                <Form onSubmit= { e => this.postDetails(e)}>
                     <Row>
                         <Col md="3"></Col>
                         <Col md="3"><h2>Details</h2></Col>
@@ -90,12 +130,20 @@ class Reciever extends Component {
                         </Col>
                         <Col md="3"></Col>
                     </Row>
+                    <Row>
+                        <Col md="3"></Col>
+                        <Col md="3">
+                            <Button type="Submit">Submit</Button>
+                        </Col>
+                        <Col md="3"></Col>
+                        <Col md="3"></Col>
+                    </Row>
                 </Form>
                 <Table striped bordered hover variant="primary">
                     <thead>
                         <th>Name</th>
-                        <th>Phone_no</th>
-                        <th>No_of_people</th>
+                        <th>Phone no</th>
+                        <th>No of people</th>
                     </thead>
                     <tbody>
                         {

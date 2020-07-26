@@ -138,7 +138,7 @@ class Donate extends Component {
                     </Row>
 
                     <Row>
-                        <Col md="3"></Col>
+                    <Col md="3"></Col>
                         <Col md="3">
                             <Button type="Submit">Submit</Button>
                         </Col>
