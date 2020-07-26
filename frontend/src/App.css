@@ -8,8 +8,8 @@
 }
 
 #button div {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -29,8 +29,6 @@ footer {
   }
 
 #contact {
-    position: fixed;
-    bottom: 0px;
     background-color: #e9ecef;
     margin-right: 15px;
 }

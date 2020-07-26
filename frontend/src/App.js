@@ -11,6 +11,7 @@ import Content from './components/Content';
 
 import Contact from './components/Contact';
 import Donate from  './components/Donator';
+import Reciever from './components/Reciever';
 
 
 function App() {  
@@ -23,9 +24,10 @@ function App() {
         <Switch>
           <Route path="/" exact component= { Content } />
           <Route path="/donate" exact component= { Donate } />
-          
+          <Route path="/recieve" exact component= { Reciever } />
 
         </Switch>
+        <Contact />
       </Container>
     </Router>
   );

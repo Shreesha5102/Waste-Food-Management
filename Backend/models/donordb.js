@@ -9,27 +9,27 @@ var DonorSchema = mongoose.Schema({
         type: String,
         required: true
     },
-<<<<<<< HEAD
     Street: {
         type: String,
         required: true
     },
-    Town: {
+    State: {
         type: String,
         required: true
     },
     City: {
-=======
-    Items: {
         type: String,
         required: true
     },
-    address: {
->>>>>>> e5ba816f6336fc207cbdf811e80c9d5f9d6c053d
+    No_of_pep: {
         type: String,
         required: true
+    },
+    No_of_item: {
+        type:String,
+        required: true
     }
-}) 
+}); 
 
 
 module.exports = mongoose.model('Donor', DonorSchema);
