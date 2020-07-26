@@ -9,7 +9,7 @@ class Bar extends Component {
     render() { 
         return ( 
             <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="/">
                     LIMIT BREAKERS
                 </Navbar.Brand>
             </Navbar>

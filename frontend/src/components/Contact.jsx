@@ -14,7 +14,7 @@ class Contact extends Component {
                 </Row>
                 <Row>
                     <p>
-                        This Project is developed by <strong>"LIMIT BREAKER"</strong>:<br></br> 
+                        This Project is developed by <strong>"LIMIT BREAKERS"</strong>:<br></br> 
                         ->Raghav Jindal<br></br>
                         ->Swaroop Kumar<br></br>
                         ->Shubang C S<br></br>
