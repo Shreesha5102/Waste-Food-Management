@@ -14,7 +14,7 @@ class Jumbo extends Component {
                 <Container>
                   <h1>Food Management</h1>
                   <p>
-                    An organised and efficient to way to manage leftover food. 
+                    An organised and efficient way to manage leftover food. 
                   </p>
                 </Container>
             </Jumbotron>

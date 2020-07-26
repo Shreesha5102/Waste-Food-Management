@@ -14,11 +14,11 @@ class Contact extends Component {
                     <div class="row ">
                         <div class="col-sm-12">
                             <h4> Please do not hesitate to contact us directly</h4>
-                            <h3><span class="glyphicon glyphicon-map-marker"></span>Limit Breakers</h3><br></br>
-                            <h3><span class="glyphicon glyphicon-phone"></span> +91 6362458730</h3><br></br>
-                            <h3><span class="glyphicon glyphicon-phone"></span> +91 9686867091</h3><br></br>
-                            <h3><span class="glyphicon glyphicon-envelope"></span> foodforall@gmail.com</h3><br></br>
-                            <h3><span class="glyphicon glyphicon-envelope"></span> limitbreakers@gmail.com </h3><br></br>
+                            <h4><span class="glyphicon glyphicon-map-marker"></span>Limit Breakers</h4><br></br>
+                            <h4><span class="glyphicon glyphicon-phone"></span> +91 6362458730</h4><br></br>
+                            <h4><span class="glyphicon glyphicon-phone"></span> +91 9686867091</h4><br></br>
+                            <h4><span class="glyphicon glyphicon-envelope"></span> foodforall@gmail.com</h4><br></br>
+                            <h4><span class="glyphicon glyphicon-envelope"></span> limitbreakers@gmail.com </h4><br></br>
                         </div>
                     </div>
           </center> 
