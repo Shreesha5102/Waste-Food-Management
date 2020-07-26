@@ -1,72 +1,61 @@
 import React, { Component } from "react";
 
 export default class Login extends Component {
-    render() {
-        const validate = () => {
-            var un = document.login.username.value;
-	var pw = document.login.password.value;
-	var valid = false;
-	var usernameArray = ["Swaroop", "Shreesha"];
-	var passwordArray = ["12345", "54321"];
-	for (var i = 0; i < usernameArray.length; i++)
- {
+	constructor(props) {
+		super(props);
+		this.state = {
+			un: "",
+			pw: ""
+		}
+	}
 
-	if ((un == usernameArray[i]) && (pw == passwordArray[i]))
-	{
-		valid = true;
-		break;
+	handlechange = (event) => {
+        let name = event.target.name;
+        let value = event.target.value;
+        this.setState({
+            [name] : value
+        });
 	}
-}
-	if (valid)
-	{
-		alert("Login was successful");
-		window.location = "www.google.ie";
-		return false;
+	validate = (event) => {
+		event.preventDefault();
+		var valid = false;
+		var usernameArray = ["Swaroop", "Shreesha"];
+		var passwordArray = ["12345", "54321"];
+		var count = 0;
+		for (var i = 0; i < usernameArray.length; i++){
+			if ((this.state.un === usernameArray[i]) && (this.state.pw === passwordArray[i])){
+				valid = true;
+				break;
+			}
+		}
+		if (valid){
+			alert("Login was successful");
+			window.location = "http://localhost:3000";
+		}else{
+			alert("Login was unsuccessful");
+			window.location = "http://localhost:3000/admin";
+		}
 	}
-	var again = " tries";
-	if (count ==1)
-	{
-		again = " try"
-	}
-	if (count >= 1)
-	{
-		alert("Wrong password or username")
-		count--;
-	}
-	else
-	{
-		alert("Incorrect password or username you are now blocked");
-		document.login.username.value = "You are now Blocked";
-		document.login.password.value = "Fool you can't see this";
-		document.login.username.disabled = true;
-		document.login.password.disabled = true;
-		return false;
-	}
-        }
+
+    render() {
+        
         return (
-            <form>
+            <form onSubmit = { event => this.validate(event)}>
                 <h3>Sign In</h3>
 
                 <div className="form-group">
-                    <label>Email address</label>
-                    <input type="email" className="form-control" placeholder="Enter email" />
+                    <label>User Name</label>
+                    <input name="un" type="text" className="form-control" placeholder="Username" onChange={event => this.handlechange(event)} required/>
                 </div>
 
                 <div className="form-group">
                     <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" />
+                    <input name="pw" type="password" className="form-control" placeholder="Password" onChange={event => this.handlechange(event)} required />
                 </div>
 
-                <div className="form-group">
-                    <div className="custom-control custom-checkbox">
-                        <input type="checkbox" className="custom-control-input" id="customCheck1" />
-                        <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
-                    </div>
-                </div>
-
-                <button type="submit" className="btn btn-primary btn-block" onClick={validate}>Submit </button>
+                <button type="submit" className="btn btn-primary btn-block">Submit </button>
                 <p className="forgot-password text-right">
-                    Forgot <a href="#">password?</a>
+					<a href="#">Forgot password?</a>
                 </p>
             </form>
         );

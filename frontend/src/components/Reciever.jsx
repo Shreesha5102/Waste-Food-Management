@@ -79,13 +79,13 @@ class Reciever extends Component {
                         <Col md="3">
                             <Form.Group controlId="formBasicname">
                                 <Form.Label>Name</Form.Label>
-                                <Form.Control type="text" placeholder="Name" />
+                                <Form.Control type="text" placeholder="Name" onChange={event => this.handlechange(event)} required/>
                             </Form.Group>
                         </Col>
                         <Col md="3">
                             <Form.Group controlId="formBasicnumber">
                                 <Form.Label>Phone Number</Form.Label>
-                                <Form.Control type="text" placeholder="Phone Number" pattern="^[6-9][0-9]{9}$" />
+                                <Form.Control type="text" placeholder="Phone Number" pattern="^[6-9][0-9]{9}$" onChange={event => this.handlechange(event)} required/>
                             </Form.Group>
                         </Col>
                         <Col md="3"></Col>
@@ -96,13 +96,13 @@ class Reciever extends Component {
                         <Col md="3">
                             <Form.Group controlId="formBasicname">
                                 <Form.Label>street</Form.Label>
-                                <Form.Control type="text" placeholder="street" />
+                                <Form.Control type="text" placeholder="street" onChange={event => this.handlechange(event)} required />
                             </Form.Group>
                         </Col>
                         <Col md="3">
                             <Form.Group>
                                 <Form.Label>Country</Form.Label>
-                                <Form.Control name="country" as="select" className="countries order-alpha presel-IN" id="countryId" >
+                                <Form.Control name="country" as="select" className="countries order-alpha presel-IN" id="countryId" onChange={event => this.handlechange(event)} required>
                                     <option>select</option>
                                 </Form.Control>
                             </Form.Group>
@@ -115,7 +115,7 @@ class Reciever extends Component {
                         <Col md="3">
                             <Form.Group>
                                 <Form.Label>State</Form.Label>
-                                <Form.Control name="state" as="select" className="states order-alpha" id="stateId">
+                                <Form.Control name="state" as="select" className="states order-alpha" id="stateId" onChange={event => this.handlechange(event)} required>
                                     <option>select</option>
                                 </Form.Control>
                             </Form.Group> 
@@ -123,7 +123,7 @@ class Reciever extends Component {
                         <Col md="3">
                             <Form.Group>
                                 <Form.Label>City</Form.Label>
-                                <Form.Control name="city" as="select" className="cities order-alpha limit-pop-10000" id="cityId">
+                                <Form.Control name="city" as="select" className="cities order-alpha limit-pop-10000" id="cityId" onChange={event => this.handlechange(event)} required>
                                     <option>select</option>
                                 </Form.Control>
                             </Form.Group>

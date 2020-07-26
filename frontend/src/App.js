@@ -27,6 +27,7 @@ function App() {
           <Route path="/" exact component= { Content } />
           <Route path="/donate" exact component= { Donate } />
           <Route path="/recieve" exact component= { Reciever } />
+          <Route path="/admin" exact component= { Login } />
 
         </Switch>
         <Contact />
