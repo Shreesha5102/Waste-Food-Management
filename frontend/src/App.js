@@ -4,6 +4,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
+import Login from './components/Login';
 import Bar from './components/Navbar';
 import Jumbo from './components/Jubmo';
 import Carouseal from './components/Carouseal';
@@ -18,6 +19,7 @@ function App() {
   return (
     <Router>
       <Container fluid>
+        
         <Bar />
         <Jumbo />
         <Carouseal />

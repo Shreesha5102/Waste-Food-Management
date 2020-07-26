@@ -10,15 +10,15 @@ class Contact extends Component {
         return ( 
             <Container fluid id="contact">
             <center>   
-                <h2>CONTACT US</h2>
+                <h3>CONTACT US</h3>
                     <div class="row ">
                         <div class="col-sm-12">
-                            <h4> Please do not hesitate to contact us directly</h4>
-                            <h4><span class="glyphicon glyphicon-map-marker"></span>Limit Breakers</h4><br></br>
-                            <h4><span class="glyphicon glyphicon-phone"></span> +91 6362458730</h4><br></br>
-                            <h4><span class="glyphicon glyphicon-phone"></span> +91 9686867091</h4><br></br>
-                            <h4><span class="glyphicon glyphicon-envelope"></span> foodforall@gmail.com</h4><br></br>
-                            <h4><span class="glyphicon glyphicon-envelope"></span> limitbreakers@gmail.com </h4><br></br>
+                            <h6> Please do not hesitate to contact us directly</h6>
+                            <h6><span class="glyphicon glyphicon-map-marker"></span>Limit Breakers</h6><br></br>
+                            <h6><span class="glyphicon glyphicon-phone"></span> +91 6362458730</h6><br></br>
+                            <h6><span class="glyphicon glyphicon-phone"></span> +91 9686867091</h6><br></br>
+                            <h6><span class="glyphicon glyphicon-envelope"></span> foodforall@gmail.com</h6><br></br>
+                            <h6><span class="glyphicon glyphicon-envelope"></span> limitbreakers@gmail.com </h6><br></br>
                         </div>
                     </div>
           </center> 
