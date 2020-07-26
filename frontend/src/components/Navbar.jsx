@@ -9,8 +9,8 @@ class Bar extends Component {
     render() { 
         return ( 
             <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="/">
-                    LIMIT BREAKERS
+                <Navbar.Brand href="#home">
+                   <center>LIMIT BREAKERS</center> 
                 </Navbar.Brand>
             </Navbar>
          );

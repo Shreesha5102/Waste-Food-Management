@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Row, Container} from 'react-bootstrap';
+import { Container} from 'react-bootstrap';
 
 class Contact extends Component {
     constructor(props) {
@@ -9,19 +9,21 @@ class Contact extends Component {
     render() { 
         return ( 
             <Container fluid id="contact">
-                <Row>
-                    <h2>About</h2>
-                </Row>
-                <Row>
-                    <p>
-                        This Project is developed by <strong>"LIMIT BREAKERS"</strong>:<br></br> 
-                        ->Raghav Jindal<br></br>
-                        ->Swaroop Kumar<br></br>
-                        ->Shubang C S<br></br>
-                        ->Shreesha Bhat<br></br>
-                    </p>
-                    
-                </Row>
+            <center>   
+          <h2>CONTACT US</h2>
+          <div class="row ">
+            <div class="col-sm-12">
+              <h4> Please do not hesitate to contact us directly</h4>
+              <p><h3><span class="glyphicon glyphicon-map-marker"></span>Limit Breakers</h3></p>
+              <p><h3><span class="glyphicon glyphicon-phone"></span> +91 6362458730</h3></p>
+              <p><h3><span class="glyphicon glyphicon-phone"></span> +91 9686867091</h3></p>
+              <p><h3><span class="glyphicon glyphicon-envelope"></span> foodforall@gmail.com</h3></p>
+              <p><h3><span class="glyphicon glyphicon-envelope"></span> limitbreakers@gmail.com </h3></p>
+            </div>
+          </div>
+          </center> 
+          
+      
             </Container>
          );
     }
