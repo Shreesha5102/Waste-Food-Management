@@ -1,12 +1,27 @@
 import React, { Component } from 'react';
-import { Form, Container, Row, Col } from 'react-bootstrap';
+import { Form, Container, Row, Col, Table } from 'react-bootstrap';
 
 class Reciever extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            
+            donators_list: []
          }
+    }
+
+    componentDidMount = () =>{
+        this.getDonors();
+    }
+
+    getDonors = () => {
+        fetch("http://localhost:4000/route/recieve")
+        .then(res => res.json())
+         .then( data => {
+             console.log("getting Donors list");
+             this.setState({
+                 donators_list: data
+             });
+         })
     }
     render() { 
         return ( 
@@ -76,7 +91,25 @@ class Reciever extends Component {
                         <Col md="3"></Col>
                     </Row>
                 </Form>
-
+                <Table striped bordered hover variant="primary">
+                    <thead>
+                        <th>Name</th>
+                        <th>Phone_no</th>
+                        <th>No_of_people</th>
+                    </thead>
+                    <tbody>
+                        {
+                            this.state.donators_list.map((event,i) => (
+                                    <tr key={i}>
+                                        <td>{event.Name}</td>
+                                        <td>{event.Phone_no}</td>
+                                        <td>{event.No_of_pep}</td>
+                                    </tr>
+                                )
+                            )
+                        }
+                    </tbody>
+                </Table>
                 
             </Container>
          );

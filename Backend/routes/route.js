@@ -23,5 +23,15 @@ router.post('/donate', async (req, res) => {
     }
 });
 
+router.get('/recieve', async (req,res) => {
+    try{
+        console.log("Entries in DB")
+        const reppo = await donors.find();
+          res.json(reppo);
+        }catch(err){
+            res.json({message:err});
+        }
+    });
+
 module.exports = router;
 
