@@ -17,15 +17,15 @@ var OrderSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    Street: {
+    rStreet: {
         type: String,
         required: true
     },
-    State: {
+    rState: {
         type: String,
         required: true
     },
-    City: {
+    rCity: {
         type: String,
         required: true
     }

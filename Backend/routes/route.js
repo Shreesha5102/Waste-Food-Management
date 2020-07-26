@@ -3,7 +3,7 @@ const router = express.Router();
 
 const donors = require('../models/donordb');
 const reciever = require('../models/recieverdb');
-
+const orders = require("../models/orders");
 
 //Donor Routes
 router.post('/donate', async (req, res) => {
@@ -55,6 +55,36 @@ router.post('/recievedetails', async (req, res)=>{
     }catch(err){
         res.json({message: err})
     }
+});
+
+//order Routes
+router.post("/order", async (req, res) => {
+    console.log(req.body);
+    const order = new orders({
+        dName: req.body.dName ,
+        rName: req.body.rName ,
+        dPhone_no: req.body.dPhone_no ,
+        rPhone_no: req.body.rPhone_no,
+        rStreet: req.body.rStreet,
+        rState: req.body.rState,
+        rCity: req.body.rCity,
+    });
+    try {
+        const savedOrder = await order.save();
+        res.json(savedOrder);
+    } catch (err) {
+        res.json({message:err});
+    }
+});
+
+router.get("/order", async(req, res) => {
+    try{
+        console.log("orders");
+        const reppo = await orders.find();
+          res.json(reppo);
+        }catch(err){
+            res.json({message:err});
+        }
 })
 
 module.exports = router;

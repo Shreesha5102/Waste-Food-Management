@@ -146,7 +146,6 @@ class Donate extends Component {
                         <Col md="3"></Col>
                     </Row>
                 </Form>
-        <p>{this.state.Name + this.state.Country}</p>
             </Container>
          );
     }

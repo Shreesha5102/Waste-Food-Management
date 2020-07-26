@@ -13,6 +13,7 @@ import Content from './components/Content';
 import Contact from './components/Contact';
 import Donate from  './components/Donator';
 import Reciever from './components/Reciever';
+import Order from './components/orders';
 
 
 function App() {  
@@ -28,7 +29,7 @@ function App() {
           <Route path="/donate" exact component= { Donate } />
           <Route path="/recieve" exact component= { Reciever } />
           <Route path="/admin" exact component= { Login } />
-
+          <Route path="/admin/orders" exact component= { Order } />
         </Switch>
         <Contact />
       </Container>

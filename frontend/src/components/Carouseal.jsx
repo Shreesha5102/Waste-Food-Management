@@ -12,7 +12,7 @@ class Carouseal extends Component {
     }
     render() { 
         return ( 
-          <MDBContainer>
+          <MDBContainer id="carousel">
       <MDBCarousel
       activeItem={1}
       length={3}

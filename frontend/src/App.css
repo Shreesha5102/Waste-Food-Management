@@ -33,6 +33,10 @@ footer {
     background: #0088cc ;
   }
 
+#carousel {
+    margin-bottom: 20px;
+}
+
 #contact {
     background-color: #e9ecef;
     margin-right: 15px;

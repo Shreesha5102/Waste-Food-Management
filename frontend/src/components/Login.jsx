@@ -30,7 +30,7 @@ export default class Login extends Component {
 		}
 		if (valid){
 			alert("Login was successful");
-			window.location = "http://localhost:3000";
+			window.location = "http://localhost:3000/admin/orders";
 		}else{
 			alert("Login was unsuccessful");
 			window.location = "http://localhost:3000/admin";
@@ -41,22 +41,42 @@ export default class Login extends Component {
         
         return (
             <form onSubmit = { event => this.validate(event)}>
-                <h3>Sign In</h3>
-
-                <div className="form-group">
-                    <label>User Name</label>
-                    <input name="un" type="text" className="form-control" placeholder="Username" onChange={event => this.handlechange(event)} required/>
-                </div>
-
-                <div className="form-group">
-                    <label>Password</label>
-                    <input name="pw" type="password" className="form-control" placeholder="Password" onChange={event => this.handlechange(event)} required />
-                </div>
-
-                <button type="submit" className="btn btn-primary btn-block">Submit </button>
-                <p className="forgot-password text-right">
-					<a href="#">Forgot password?</a>
-                </p>
+			    <div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4"><h3>Sign In</h3></div>
+					<div class="col-md-4"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4">
+						<div className="form-group">
+                    		<label>User Name</label>
+                    		<input name="un" type="text" className="form-control" placeholder="Username" onChange={event => this.handlechange(event)} required/>
+                		</div>
+					</div>
+					<div class="col-md-4"></div>
+				</div><div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4">
+						<div className="form-group">
+                    		<label>Password</label>
+                   			<input name="pw" type="password" className="form-control" placeholder="Password" onChange={event => this.handlechange(event)} required />
+                		</div>
+					</div>
+					<div class="col-md-4"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4">
+						<button type="submit" className="btn btn-primary btn-block">Submit </button>
+                		<p className="forgot-password text-right">
+							<a href="#">Forgot password?</a>
+                		</p>
+					</div>
+					<div class="col-md-4"></div>
+					
+				</div>
+                
             </form>
         );
     }
