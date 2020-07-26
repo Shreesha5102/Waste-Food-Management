@@ -13,7 +13,7 @@ var DonorSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    Town: {
+    State: {
         type: String,
         required: true
     },
@@ -21,12 +21,15 @@ var DonorSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    Items: {
+    No_of_pep: {
         type: String,
         required: true
     },
-    address: {
-}) 
+    No_of_item: {
+        type:String,
+        required: true
+    }
+}); 
 
 
 module.exports = mongoose.model('Donor', DonorSchema);

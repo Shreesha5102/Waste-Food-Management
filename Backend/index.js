@@ -5,7 +5,6 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const donorRoutes = require("./routes/route");
-const recieverRoutes = require("./routes/route1");
 
 app.use(cors());  //cors is used to allow cross-origin-access
 app.use(bodyParser.json());
@@ -24,6 +23,6 @@ app.use(function (req, res, next) {
     next();  // Pass to next layer of middleware
 });
 
-app.use('/route', )
+app.use('/route', donorRoutes);
 
 app.listen(4000);
